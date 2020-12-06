@@ -5,10 +5,10 @@ plugins {
 }
 
 group 'com.legyver'
-version = '1.0.0.0'
+version = '1.1.0.0'
 description = 'Checked Exceptions and Throwing Functions/Consumers/Suppliers common to Legyver libraries'
 
-apply from: 'https://raw.githubusercontent.com/Legyver/common-build/1.0/publish.gradle'
+apply from: 'https://raw.githubusercontent.com/Legyver/common-build/1.2/publish.gradle'
 
 dependencies {
     testImplementation 'junit:junit:4.13'
