@@ -1,7 +1,6 @@
 package com.legyver.core.license;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 /**
@@ -17,18 +16,4 @@ public interface LicenseService {
 	 * @throws IOException if there is a problem loading the license.properties
 	 */
 	Properties loadLicenseProperties() throws IOException;
-
-	/**
-	 * Convenience method to read the license detail from a license.properties file in the same package as the implementing service
-	 * @param klass the class to use to identify the package
-	 * @return the Properties
-	 * @throws IOException if there is a problem reading the file
-	 */
-	default Properties loadFromResourceStream(Class klass) throws IOException {
-		Properties properties = new Properties();
-		try (InputStream inputStream = klass.getResourceAsStream("license.properties")) {
-			properties.load(inputStream);
-		}
-		return properties;
-	}
 }
