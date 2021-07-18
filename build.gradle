@@ -5,8 +5,13 @@ description = 'Checked Exceptions and Throwing Functions/Consumers/Suppliers com
 apply from: 'https://raw.githubusercontent.com/Legyver/common-build/1.5/publish.gradle'
 
 dependencies {
-    testImplementation 'junit:junit:4.13'
-    testImplementation group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.19.0'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 java {
