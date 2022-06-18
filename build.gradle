@@ -1,8 +1,24 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            name = 'localPluginRepository'
+            url = 'C:/dev/local-plugin-repository'
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.net.nemerosa:versioning:3.0.0"
+        classpath "com.legyver:update-readme-version:0.1.0"
+    }
+}
+
 group 'com.legyver'
-version = '1.1.2.0'
 description = 'Checked Exceptions and Throwing Functions/Consumers/Suppliers common to Legyver libraries'
 
-apply from: 'https://raw.githubusercontent.com/Legyver/common-build/1.5/publish.gradle'
+apply from: 'https://raw.githubusercontent.com/Legyver/common-build/1.7/publish.gradle'
+apply plugin: 'com.legyver.update-readme-version'
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
@@ -14,6 +30,7 @@ test {
     useJUnitPlatform()
 }
 
-java {
-    modularity.inferModulePath = true
+updateReadmeVersion {
+    versionScheme = "SEMVER"
+    versionSchemeVersion = "2.0"
 }
