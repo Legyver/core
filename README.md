@@ -3,7 +3,7 @@ Checked Exceptions and Throwing Functions/Consumers/Suppliers common to Legyver 
 
 ## Usage
 ```groovy
-api group: 'com.legyver', name: 'core', version: '2.0.0-alpha.1'
+api group: 'com.legyver', name: 'core', version: '2.0.0'
 ```
 
 ## Built with
