@@ -1,4 +1,6 @@
 # Releases
+## 2.1.0
+- Added LicenseServiceRegistry for aggregating licenses at runtime based on self-reporting libraries
 ## 2.0
 - Adopted SemVer 2.0 versioning.
 - Compiled with JDK 11 for wider audience.
